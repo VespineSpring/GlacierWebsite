@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Inter:700|Inter:400');
 
 :root {
-    --text: #ffffff;
-    --background: #1c1c1c;
-    --primary: #0b7956;
-    --secondary: #3d6651;
-    --accent: #8cba5f;
+    --text: #e4f1ea;
+    --background: #050a07;
+    --primary: #00c254;
+    --secondary: #00b670;
+    --accent: #22f17c;
 }
 
 * {
@@ -39,10 +39,37 @@ h5 {font-size: 1.333rem; /* 21.28px */}
 
 small {font-size: 0.750rem; /* 12px */}
 
+.no-decoration {
+    text-decoration: none;
+    color: inherit;
+}
+
+.primary-color {
+    color: var(--primary);
+}
+
+.secondary-color {
+    color: var(--secondary);
+}
+
+.primary-button {
+    background-color: var(--primary);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    transition: all 0.3s ease 0s;
+}
+
+.primary-button:hover {
+    background-color: var(--accent);
+    color: var(--primary);
+}
+
 header {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 2px 5px rgba(100, 100, 100, 0.3);
 }
 
 nav {
@@ -50,6 +77,8 @@ nav {
     justify-content: space-between;
     padding: 1rem 2rem;
     background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border-bottom: var(--accent) 1px solid;
 }
 
 nav .branding {
@@ -58,8 +87,8 @@ nav .branding {
 }
 
 nav .branding .logo {
-    height: 80px;
-    width: 80px;
+    height: 70px;
+    width: 70px;
 }
 
 nav .nav-links {
@@ -74,11 +103,56 @@ nav .nav-links li {
 }
 
 nav .nav-links li a {
-    text-decoration: none;
-    color: var(--text);
     transition: all 0.3s ease 0s;
 }
 
 nav .nav-links li a:hover {
     color: var(--primary);
+}
+
+main section {
+    position: relative;
+    padding: 10rem 3rem;
+}
+
+main .hero {
+    background: url("assets/bg.png") center/cover no-repeat;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .hero .text h3 {
+    margin-bottom: 2rem;
+}
+
+main .hero img {
+    height: 50%;
+    width: 50%;
+    border-radius: 1rem;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 149px;
+}
+
+.wave .shape-fill {
+    fill: #050A07;
+}
+
+main .features {
+    padding-top: 1rem;
 }
