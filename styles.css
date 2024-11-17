@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Inter:700|Inter:400');
 
 :root {
-    --text: #e4f1ea;
-    --background: #050a07;
-    --primary: #00c254;
-    --secondary: #00b670;
-    --accent: #22f17c;
+    --text: #eaf3ec;
+    --background: #030704;
+    --background-dark: #020503;
+    --primary: #0B7956;
+    --secondary: #5fd6ad;
+    --accent: #37dfa7;
 }
 
 * {
@@ -76,7 +77,7 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 1rem 2rem;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(2, 5, 3, 0.5);
     backdrop-filter: blur(10px);
     border-bottom: var(--accent) 1px solid;
 }
@@ -150,9 +151,44 @@ main .hero img {
 }
 
 .wave .shape-fill {
-    fill: #050A07;
+    fill: var(--background);
 }
 
 main .features {
     padding-top: 1rem;
+}
+
+main .features h1 {
+    text-align: center;
+}
+
+.feature-cards {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem 4rem 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.feature-cards .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-dark);
+    padding: 2rem;
+    gap: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    width: 300px;
+}
+
+.feature-cards .card img {
+    height: 100px;
+    width: 100px;
+}
+
+.feature-cards .card h4 {
+    text-decoration: underline var(--accent) 3px;
+    text-underline-offset: 10px;
 }
